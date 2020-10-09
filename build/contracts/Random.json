@@ -1,0 +1,653 @@
+{
+  "contractName": "Random",
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "flipHead",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.12+commit.7709ece9\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":false,\"inputs\":[],\"name\":\"flipHead\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/home/ape/backup/ivanontech/academy/smart_contracts_advanced/BettingDapp/contracts/Random.sol\":\"Random\"},\"evmVersion\":\"petersburg\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/home/ape/backup/ivanontech/academy/smart_contracts_advanced/BettingDapp/contracts/Random.sol\":{\"keccak256\":\"0x879918f02050fd385f2e9c2f1085f441935dd3e8223734bb305112ff22fe4edd\",\"urls\":[\"bzz-raw://e7e8d8871602e55f3b42724492b30413ca8dc43f0fc7b173dc2361dae9e5d9b0\",\"dweb:/ipfs/QmTad2Q5FuEBGrQwyo7T4EbP1wkufbYD1dZrLA4aGK1Eps\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b5060ab8061001f6000396000f3fe6080604052348015600f57600080fd5b506004361060285760003560e01c80637a59821314602d575b600080fd5b6033604d565b604051808215151515815260200191505060405180910390f35b60008060024281605957fe5b0690506000811415606d5760009150506073565b60019150505b9056fea265627a7a72315820199ebe1c80f1214091e606990223bbbefcca8d89ed60bd0e758993366092166f64736f6c634300050c0032",
+  "deployedBytecode": "0x6080604052348015600f57600080fd5b506004361060285760003560e01c80637a59821314602d575b600080fd5b6033604d565b604051808215151515815260200191505060405180910390f35b60008060024281605957fe5b0690506000811415606d5760009150506073565b60019150505b9056fea265627a7a72315820199ebe1c80f1214091e606990223bbbefcca8d89ed60bd0e758993366092166f64736f6c634300050c0032",
+  "sourceMap": "26:177:3:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;26:177:3;;;;;;;",
+  "deployedSourceMap": "26:177:3:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;26:177:3;;;;;;;;;;;;;;;;;;;46:154;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;82:4;94:9;112:1;106:3;:7;;;;;;94:19;;131:1;123:4;:9;119:77;;;149:5;142:12;;;;;119:77;185:4;178:11;;;46:154;;:::o",
+  "source": "pragma solidity 0.5.12;\n\n\ncontract Random{\n\n  function flipHead() public returns( bool ){\n    uint flip = now % 2;\n    if( flip == 0 ){\n      return false;\n    }\n    else{\n      return true;\n    }\n  }\n\n}\n",
+  "sourcePath": "/home/ape/backup/ivanontech/academy/smart_contracts_advanced/BettingDapp/contracts/Random.sol",
+  "ast": {
+    "absolutePath": "/home/ape/backup/ivanontech/academy/smart_contracts_advanced/BettingDapp/contracts/Random.sol",
+    "exportedSymbols": {
+      "Random": [
+        273
+      ]
+    },
+    "id": 274,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 250,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".12"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:3"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 273,
+        "linearizedBaseContracts": [
+          273
+        ],
+        "name": "Random",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 271,
+              "nodeType": "Block",
+              "src": "88:112:3",
+              "statements": [
+                {
+                  "assignments": [
+                    256
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 256,
+                      "name": "flip",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 271,
+                      "src": "94:9:3",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      },
+                      "typeName": {
+                        "id": 255,
+                        "name": "uint",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "94:4:3",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 260,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "commonType": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    },
+                    "id": 259,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "argumentTypes": null,
+                      "id": 257,
+                      "name": "now",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 290,
+                      "src": "106:3:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "%",
+                    "rightExpression": {
+                      "argumentTypes": null,
+                      "hexValue": "32",
+                      "id": 258,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "112:1:3",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_2_by_1",
+                        "typeString": "int_const 2"
+                      },
+                      "value": "2"
+                    },
+                    "src": "106:7:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "94:19:3"
+                },
+                {
+                  "condition": {
+                    "argumentTypes": null,
+                    "commonType": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    },
+                    "id": 263,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "argumentTypes": null,
+                      "id": 261,
+                      "name": "flip",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 256,
+                      "src": "123:4:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "==",
+                    "rightExpression": {
+                      "argumentTypes": null,
+                      "hexValue": "30",
+                      "id": 262,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "131:1:3",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_0_by_1",
+                        "typeString": "int_const 0"
+                      },
+                      "value": "0"
+                    },
+                    "src": "123:9:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "falseBody": {
+                    "id": 269,
+                    "nodeType": "Block",
+                    "src": "170:26:3",
+                    "statements": [
+                      {
+                        "expression": {
+                          "argumentTypes": null,
+                          "hexValue": "74727565",
+                          "id": 267,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "bool",
+                          "lValueRequested": false,
+                          "nodeType": "Literal",
+                          "src": "185:4:3",
+                          "subdenomination": null,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_bool",
+                            "typeString": "bool"
+                          },
+                          "value": "true"
+                        },
+                        "functionReturnParameters": 254,
+                        "id": 268,
+                        "nodeType": "Return",
+                        "src": "178:11:3"
+                      }
+                    ]
+                  },
+                  "id": 270,
+                  "nodeType": "IfStatement",
+                  "src": "119:77:3",
+                  "trueBody": {
+                    "id": 266,
+                    "nodeType": "Block",
+                    "src": "134:27:3",
+                    "statements": [
+                      {
+                        "expression": {
+                          "argumentTypes": null,
+                          "hexValue": "66616c7365",
+                          "id": 264,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "bool",
+                          "lValueRequested": false,
+                          "nodeType": "Literal",
+                          "src": "149:5:3",
+                          "subdenomination": null,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_bool",
+                            "typeString": "bool"
+                          },
+                          "value": "false"
+                        },
+                        "functionReturnParameters": 254,
+                        "id": 265,
+                        "nodeType": "Return",
+                        "src": "142:12:3"
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 272,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "flipHead",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 251,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "63:2:3"
+            },
+            "returnParameters": {
+              "id": 254,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 253,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 272,
+                  "src": "82:4:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 252,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "82:4:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "80:8:3"
+            },
+            "scope": 273,
+            "src": "46:154:3",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 274,
+        "src": "26:177:3"
+      }
+    ],
+    "src": "0:204:3"
+  },
+  "legacyAST": {
+    "absolutePath": "/home/ape/backup/ivanontech/academy/smart_contracts_advanced/BettingDapp/contracts/Random.sol",
+    "exportedSymbols": {
+      "Random": [
+        273
+      ]
+    },
+    "id": 274,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 250,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".12"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:3"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 273,
+        "linearizedBaseContracts": [
+          273
+        ],
+        "name": "Random",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 271,
+              "nodeType": "Block",
+              "src": "88:112:3",
+              "statements": [
+                {
+                  "assignments": [
+                    256
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 256,
+                      "name": "flip",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 271,
+                      "src": "94:9:3",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      },
+                      "typeName": {
+                        "id": 255,
+                        "name": "uint",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "94:4:3",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 260,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "commonType": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    },
+                    "id": 259,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "argumentTypes": null,
+                      "id": 257,
+                      "name": "now",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 290,
+                      "src": "106:3:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "%",
+                    "rightExpression": {
+                      "argumentTypes": null,
+                      "hexValue": "32",
+                      "id": 258,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "112:1:3",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_2_by_1",
+                        "typeString": "int_const 2"
+                      },
+                      "value": "2"
+                    },
+                    "src": "106:7:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "94:19:3"
+                },
+                {
+                  "condition": {
+                    "argumentTypes": null,
+                    "commonType": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    },
+                    "id": 263,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "argumentTypes": null,
+                      "id": 261,
+                      "name": "flip",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 256,
+                      "src": "123:4:3",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "==",
+                    "rightExpression": {
+                      "argumentTypes": null,
+                      "hexValue": "30",
+                      "id": 262,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "number",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "131:1:3",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_rational_0_by_1",
+                        "typeString": "int_const 0"
+                      },
+                      "value": "0"
+                    },
+                    "src": "123:9:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "falseBody": {
+                    "id": 269,
+                    "nodeType": "Block",
+                    "src": "170:26:3",
+                    "statements": [
+                      {
+                        "expression": {
+                          "argumentTypes": null,
+                          "hexValue": "74727565",
+                          "id": 267,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "bool",
+                          "lValueRequested": false,
+                          "nodeType": "Literal",
+                          "src": "185:4:3",
+                          "subdenomination": null,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_bool",
+                            "typeString": "bool"
+                          },
+                          "value": "true"
+                        },
+                        "functionReturnParameters": 254,
+                        "id": 268,
+                        "nodeType": "Return",
+                        "src": "178:11:3"
+                      }
+                    ]
+                  },
+                  "id": 270,
+                  "nodeType": "IfStatement",
+                  "src": "119:77:3",
+                  "trueBody": {
+                    "id": 266,
+                    "nodeType": "Block",
+                    "src": "134:27:3",
+                    "statements": [
+                      {
+                        "expression": {
+                          "argumentTypes": null,
+                          "hexValue": "66616c7365",
+                          "id": 264,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "bool",
+                          "lValueRequested": false,
+                          "nodeType": "Literal",
+                          "src": "149:5:3",
+                          "subdenomination": null,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_bool",
+                            "typeString": "bool"
+                          },
+                          "value": "false"
+                        },
+                        "functionReturnParameters": 254,
+                        "id": 265,
+                        "nodeType": "Return",
+                        "src": "142:12:3"
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 272,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "flipHead",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 251,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "63:2:3"
+            },
+            "returnParameters": {
+              "id": 254,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 253,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 272,
+                  "src": "82:4:3",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 252,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "82:4:3",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "80:8:3"
+            },
+            "scope": 273,
+            "src": "46:154:3",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 274,
+        "src": "26:177:3"
+      }
+    ],
+    "src": "0:204:3"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.12+commit.7709ece9.Emscripten.clang"
+  },
+  "networks": {
+    "5777": {
+      "events": {},
+      "links": {},
+      "address": "0xe3BCc082F55121933fF3Bf4F0811A1312a19Ab4c",
+      "transactionHash": "0x68c82d7d5819b9ccd6d4b63760950273a7c4f5602f425ab00484fbd0cf26253e"
+    }
+  },
+  "schemaVersion": "3.0.16",
+  "updatedAt": "2020-10-05T10:06:26.887Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}
